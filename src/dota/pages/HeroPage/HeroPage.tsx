@@ -13,6 +13,7 @@ export const HeroPage = () => {
   const { oneData, isLoading, getData } = useFetch();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getData( id );
   }, [ id ]);
 
