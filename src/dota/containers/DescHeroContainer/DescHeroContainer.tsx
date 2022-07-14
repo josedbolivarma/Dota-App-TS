@@ -14,7 +14,7 @@ export const DescHeroContainer = ({ localized_name, poster, animation, image, ob
     <div className='desc__container'>
             <div>
                 <div className="hero__animation">
-                    <video className="hero__video" autoPlay loop playsInline muted poster={ poster }><source type="video/webm" src={ animation }/><img src={ image } /></video>
+                    <video className="animate__animated animate__fadeInLeft hero__video" autoPlay loop playsInline muted poster={ poster }><source type="video/webm" src={ animation }/><img src={ image } /></video>
                 </div>
             </div>
 
