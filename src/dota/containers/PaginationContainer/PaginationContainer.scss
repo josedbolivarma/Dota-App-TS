@@ -1,0 +1,121 @@
+@import '../../../scss/lib/mediaqueries';
+
+.heroPaginations {
+    width: 100%;
+    height: 100%;
+    margin-top: 16rem;
+  }
+
+.heroPaginations__container {
+  display: grid;
+  grid-template-columns: 1fr .3fr 1fr;
+}
+
+.heroPaginations__boxHero {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+    overflow: 0 0 hidden 0;
+    display: flex;
+    padding: 0 10px;
+    @include tablet {
+        padding: 0 40px;
+    }
+  }
+
+.heroPaginations__animation {
+    position: absolute;
+    width: 600px;
+    bottom: -200px;
+    z-index: -1;
+    cursor: pointer;
+    display: none;
+    @include tablet {
+        display: block;
+    }
+  }
+
+.heroPaginations__heroBackground {
+    position: absolute;
+    background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly_wide.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 6px #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2
+}
+
+.heroPaginations__boxContentOne {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #FFF;
+}
+
+.heroPaginations__heroAllBox {
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    cursor: pointer;
+    &:hover {
+      & div div {
+        background-color: #FFF
+      }
+    }
+  }
+
+.heroPaginations__boxes {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: .4rem;
+}
+
+.heroPaginations__boxesBox {
+    height: 100%;
+    box-shadow: 2px 2px 6px #000;
+    background-color: #9e9fa0;
+    transition: .2s all;
+}
+
+.heroPaginations__heroAllBoxTitle {
+    font-size: 1rem;
+    text-align: center;
+    color: #FFF;
+    font-weight: 380;
+}
+
+//   TEXT
+.heroPaginations__title {
+    font-size: 1rem;
+    @include tablet {
+        font-size: 1.4rem;
+    }
+}
+
+.heroPaginations__subtitle {
+    font-size: 1.4rem;
+    @include tablet {
+        font-size: 1.8rem;
+    }
+}
+
+.heroPaginations__text {
+    font-size: 1rem;
+    @include tablet {
+        font-size: 1.8rem;
+    }
+}

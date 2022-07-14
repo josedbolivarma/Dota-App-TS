@@ -49,16 +49,19 @@
 .desc__textSkill {
     font-size: 1.4rem;
     color: #94C8DA;
+    margin: .8rem 0;
 }
 
 .desc__textDescription {
     font-size: 1.5rem;
     color: #EEEEEE;
+    margin-bottom: .6rem;
 }
 
 .desc__textLinkHistory {
     color: #717273;
     font-size: 1.11rem;
+    text-decoration: underline;
     &:hover {
       color: #D8D8D8;
     }

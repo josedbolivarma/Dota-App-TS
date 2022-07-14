@@ -2,6 +2,8 @@ export interface HeroesResponse {
     id:                number;
     name:              string;
     localized_name:    string;
+    objective:         string;
+    desc:              string;
     primary_attr:      string;
     attack_type:       string;
     poster:            string;

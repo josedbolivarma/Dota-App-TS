@@ -5,6 +5,7 @@ import { Loader } from "../../../ui/Loader/Loader";
 import { DescHeroContainer } from '../../containers/DescHeroContainer/DescHeroContainer';
 import { SkillsHeroContainer } from "../../containers/SkillsHeroContainer/SkillsHeroContainer";
 import { StatisticsContainer } from "../../containers/StatisticsContainer/StatisticsContainer";
+import { PaginationContainer } from "../../containers/PaginationContainer/PaginationContainer";
 
 export const HeroPage = () => {
 
@@ -14,8 +15,6 @@ export const HeroPage = () => {
   useEffect(() => {
     getData( id );
   }, [ id ]);
-
-  console.log( oneData );
 
   return (
     <section className="section">
@@ -31,6 +30,8 @@ export const HeroPage = () => {
             <div className="container-small">
               <DescHeroContainer
               localized_name={ oneData.localized_name }
+              objective={ oneData.objective }
+              desc={ oneData.desc }
               poster={ oneData.poster }
               animation={ oneData.animation }
               image={ oneData.image }
@@ -61,6 +62,10 @@ export const HeroPage = () => {
               move_speed={ oneData.move_speed } 
               projectile_speed={ oneData.projectile_speed }              
               />
+              <PaginationContainer 
+              id={ oneData.id }
+              />
+              
             </>
                
         }

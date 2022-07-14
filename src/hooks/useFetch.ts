@@ -8,6 +8,8 @@ const ResponseType = {
     id:                0,
     name:              '',
     localized_name:    '',
+    objective:         '',
+    desc:              '',
     primary_attr:      '',
     attack_type:       '',
     poster:            '',
@@ -43,6 +45,9 @@ const ResponseType = {
 export const useFetch = () => {
     const [ data, setData ] = useState<HeroesResponse[]>([]);
     const [ oneData, setOneData ] = useState<HeroesResponse>( ResponseType );
+    
+    const [ previousHero, setPreviousHero ] = useState<HeroesResponse>( ResponseType );
+    const [ nextHero, setNextHero ] = useState<HeroesResponse>( ResponseType );
 
     const [ isLoading, setIsLoading ] = useState(true);
 
@@ -53,11 +58,39 @@ export const useFetch = () => {
             const { data } = await axios.get( URL );
             setData( data );
         } else {
-            const { data } = await axios.get( URL + id );
-            setOneData( data );
+            const { data: newData } = await axios.get( URL + id );
+            
+            const newId = parseInt(id);
+            
+            const nextHeroId = newId + 1;
+            const previousHeroId = newId - 1;
+
+            if ( previousHeroId > 0 ) {
+            const { data: newPreviousHero } = await axios.get(URL + previousHeroId);
+            setPreviousHero( newPreviousHero );
+            }
+
+            if ( nextHeroId < 123 ) {
+                const { data: newNextHero } = await axios.get(URL + nextHeroId);
+                setNextHero( newNextHero );
+            }
+
+            if ( newId === 123 ) {
+                const { data: newNextHero } = await axios.get(URL + 1);
+                setNextHero( newNextHero );
+            }
+
+            if ( newId === 1 ) {
+                const { data: newPreviousHero } = await axios.get(URL + 123 );
+                setPreviousHero( newPreviousHero );
+            }
+
+            setOneData( newData );
+
         }
 
         setIsLoading( false );
+
     }   
 
     useEffect(() => {
@@ -65,9 +98,13 @@ export const useFetch = () => {
     }, [])
 
     return {
+        // PROPERTIES
         data,
         oneData,
         isLoading,
+        previousHero,
+        nextHero,
+        // METHODS
         getData
     }
     

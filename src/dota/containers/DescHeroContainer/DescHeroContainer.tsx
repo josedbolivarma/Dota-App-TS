@@ -5,9 +5,11 @@ interface Props {
     poster: string;
     animation: string;
     image: string;
+    objective: string;
+    desc: string;
 }
 
-export const DescHeroContainer = ({ localized_name, poster, animation, image }: Props ) => {
+export const DescHeroContainer = ({ localized_name, poster, animation, image, objective, desc }: Props ) => {
   return (
     <div className='desc__container'>
             <div>
@@ -18,8 +20,8 @@ export const DescHeroContainer = ({ localized_name, poster, animation, image }: 
 
             <div className='desc__text'>
                 <h1 className="desc__textName">{ localized_name }</h1>
-                <h3 className="desc__textSkill">CORTA A SUS ENEMIGOS CON ATAQUES QUE AGOTAN EL MANÁ</h3>
-                <h4 className="desc__textDescription">Si Anti-Mage tiene la posibilidad de hacerse fuerte, pocos pueden parar sus ataques. Quemando el maná de sus enemigos con cada golpe o teletransportándose a distancias cortas para escapar de una emboscada, arrinconarlo es un desafío para cualquier enemigo.</h4>
+                <h3 className="desc__textSkill">{ objective }</h3>
+                <h4 className="desc__textDescription">{ desc }</h4>
                 <a href='#' className="desc__textLinkHistory">Leer historia completa</a>
             </div>
     </div>
