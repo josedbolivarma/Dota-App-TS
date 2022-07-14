@@ -1,0 +1,12 @@
+.filterBox {
+    display: flex;
+}
+
+.filterIcon {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    color: #fff;
+    filter: brightness(0.5) saturate(0);
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+@import '../utilities/variables';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: $bg-first;
+    background: $bg-gradient-first;
+    font-family: $font-family;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: $width;
+    margin: 0 auto;
+}
+
+.container-small {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

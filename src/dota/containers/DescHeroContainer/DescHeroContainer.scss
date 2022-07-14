@@ -1,0 +1,65 @@
+@import '../../../scss/lib/mediaqueries';
+
+.desc__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: row-reverse;
+    }
+}
+
+.hero__animation {
+    width: 100%;
+    height: 100%;
+    @include desktop {
+        position: absolute;
+        width: 165vw;
+        height: 165vh;
+        top: -200px;
+        right: -55vw;
+    }
+
+}
+
+.hero__video {
+    width: 100%;
+    height: 100%;
+   
+}
+
+.desc__text {
+    margin-top: 1rem;
+    @include desktop {
+        margin-top: 8rem;
+        max-width: 600px;
+    }
+}
+
+.desc__textName {
+    text-transform: uppercase;
+    font-size: 4.4rem;
+    color: #FFF;
+}
+
+.desc__textSkill {
+    font-size: 1.4rem;
+    color: #94C8DA;
+}
+
+.desc__textDescription {
+    font-size: 1.5rem;
+    color: #EEEEEE;
+}
+
+.desc__textLinkHistory {
+    color: #717273;
+    font-size: 1.11rem;
+    &:hover {
+      color: #D8D8D8;
+    }
+}

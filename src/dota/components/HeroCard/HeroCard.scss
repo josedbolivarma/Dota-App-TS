@@ -1,0 +1,54 @@
+@import '../../../scss/lib/mediaqueries';
+
+.grid__card {
+    width: 100%;
+    height: 180px;
+    cursor: pointer;
+    border-radius: 1px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #111, -5px -5px 10px #000;
+};
+
+.grid__item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+      z-index: 1000;
+      & img {
+      transform: scale(1.15);
+      transition: all .5s;
+      };
+      & div {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+}
+
+.gridItem {
+    width: 100%;
+    height: 180px;
+    cursor: pointer;
+    border-radius: 1px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #111,-5px -5px 10px #000;
+}
+
+.grid__content {
+    position: absolute;
+    text-align: left;
+    color: #FFF;
+    left: 5%;
+    bottom: -15%;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+    & h2 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }   
+}
+

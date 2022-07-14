@@ -1,0 +1,22 @@
+@import '../../../scss/utilities/variables';
+
+.box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.title {
+    color: $primary-color-white;
+    font-size: $size-big;
+}
+
+.description {
+    color: $primary-color-light-gray;
+    font-size: $size-medium;
+    line-height: 44px;
+}

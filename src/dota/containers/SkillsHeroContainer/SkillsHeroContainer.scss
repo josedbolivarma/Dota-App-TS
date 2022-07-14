@@ -1,0 +1,78 @@
+@import '../../../scss/lib/mediaqueries';
+
+.skillsHeroContainer {
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 100;
+    margin-top: 4rem;
+    background-image: linear-gradient(to Top, #111 0%, rgba(0, 0, 0, .5) 55%,transparent 100%);
+}
+
+.hero_container {
+    position: relative;
+    width: 100%;
+}
+
+.skillsHero_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.skillsHero_title {
+    font-size: 2.2rem;
+    color: #949494;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.skillsHero_subtitle {
+    font-size: 1.5rem;
+    color: #EEEEEE;
+    text-transform: uppercase;
+}
+
+.skillsHero_title-two {
+    font-size: 1.5rem;
+    color: #EEEEEE;
+    text-align: center;
+    margin-bottom: .4rem;
+}
+
+.skillsHero_flex-between {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+.skillsHero_flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.skillsHero_flex-skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.skillsHero_tree {
+    width: 20%;
+    height: 20%;
+}
+
+.hero__habilitiesIcon {
+    width: 20%;
+    height: 20%;
+}

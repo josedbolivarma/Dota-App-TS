@@ -1,0 +1,37 @@
+.footer {
+    width:100%;
+    background-color: #000;
+    padding:2rem 0;
+    color: #FFF;
+    z-index: 10000;
+};
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+};
+
+.footer__content {
+    width: 40%;
+    text-align: center;
+};
+
+.footer__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+};
+
+.footer__icon {
+    width: 180px;
+    height: 60pX;
+};
+
+.footer__description {
+    margin: 2rem auto;
+    color: #C8C8C8;
+};

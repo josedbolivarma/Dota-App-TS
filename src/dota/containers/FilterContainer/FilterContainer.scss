@@ -1,0 +1,29 @@
+@import '../../../scss/lib/mediaqueries';
+
+.filter {
+    width: 100%;
+    background-color: rgb(15,17,20);
+    background: linear-gradient(90deg, rgba(15,17,20,1) 0%, rgba(19,23,27,1) 44%, rgba(31,39,43,1) 57%, rgba(70,80,86,1) 100%);
+}
+
+.filter__container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    @include tablet {
+        flex-direction: row;
+    } 
+}
+
+.filter__title {
+    color: #7E8DA4;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
