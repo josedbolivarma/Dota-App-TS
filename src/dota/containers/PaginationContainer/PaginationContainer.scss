@@ -7,8 +7,12 @@
   }
 
 .heroPaginations__container {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr .3fr 1fr;
+  grid-template-columns: 1fr;
+  @include respond-to ( 520px ) {
+    grid-template-columns: 1fr .3fr 1fr;
+  }
 }
 
 .heroPaginations__boxHero {
@@ -50,13 +54,13 @@
 }
 
 .heroPaginations__boxContentOne {
-    width: 200px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
     color: #FFF;
+  
 }
 
 .heroPaginations__heroAllBox {
